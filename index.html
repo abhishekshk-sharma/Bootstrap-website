@@ -51,11 +51,120 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
+                <div class="mx-4">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Sign UP</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Log
+                        In</button>
+                </div>
             </div>
         </div>
     </nav>
+
+
+
+    <!-- Login Modal -->
+    <div class=" modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalLabel">LogIn to iCoder</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="mb-3">
+                            <a href="#" class="text-decoration-none">Forgot Password?</a>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="signupModalLabel">Get an iCoder Account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Profession</label>
+                            <select class="form-select" id="country" required>
+                                <option value="" disabled selected>Select your profession</option>
+                                <option value="India">Student</option>
+                                <option value="USA">Teacher</option>
+                                <option value="UK">Working Professional</option>
+                                <option value="Canada">None of Them</option>
+                                <!-- Add more countries as needed -->
+                            </select>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                            <label class="form-check-label" for="termsCheck">I agree to the <a href="#"
+                                    class="text-decoration-none">Terms and Conditions</a></label>
+                        </div>
+                        <div class="mb-3">
+                            <p class="text-muted">By signing up, you agree to our <a href="#"
+                                    class="text-decoration-none">Privacy Policy</a>.</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -100,7 +209,8 @@
                         class="d-inline-block mb-2 text-primary-emphasis">World</strong>
                     <h3 class="mb-0">Featured post</h3>
                     <div class="mb-1 text-body-secondary">Nov 12</div>
-                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                    <p class="card-text mb-auto">This is a wider card with supporting text below as a
+                        natural lead-in to
                         additional content.</p> <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
                         Continue reading
                         <svg class="bi" aria-hidden="true">
@@ -122,7 +232,8 @@
                         class="d-inline-block mb-2 text-success-emphasis">Design</strong>
                     <h3 class="mb-0">Post title</h3>
                     <div class="mb-1 text-body-secondary">Nov 11</div>
-                    <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                    <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in
+                        to
                         additional
                         content.</p> <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
                         Continue reading
@@ -145,7 +256,8 @@
                         class="d-inline-block mb-2 text-primary-emphasis">World</strong>
                     <h3 class="mb-0">Featured post</h3>
                     <div class="mb-1 text-body-secondary">Nov 12</div>
-                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                    <p class="card-text mb-auto">This is a wider card with supporting text below as a
+                        natural lead-in to
                         additional content.</p> <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
                         Continue reading
                         <svg class="bi" aria-hidden="true">
@@ -167,7 +279,8 @@
                         class="d-inline-block mb-2 text-success-emphasis">Design</strong>
                     <h3 class="mb-0">Post title</h3>
                     <div class="mb-1 text-body-secondary">Nov 11</div>
-                    <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                    <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in
+                        to
                         additional
                         content.</p> <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
                         Continue reading
